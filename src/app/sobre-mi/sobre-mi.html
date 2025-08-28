@@ -1,0 +1,38 @@
+<!-- sobre-mi.component.html -->
+<div class="container my-5">
+  <div class="row align-items-center">
+    
+    <!-- Foto -->
+    <div class="col-md-4 text-center">
+      <img src="assets/foto-perfil.jpg" 
+           class="img-fluid rounded-circle shadow-sm" 
+           alt="Foto de perfil">
+    </div>
+
+    <!-- Texto -->
+    <div class="col-md-8">
+      <h2>Sobre mí</h2>
+      <p>
+        ¡Hola! Soy Jorge, desarrollador en formación especializado en 
+        <strong>Angular, TypeScript y bases de datos</strong>.  
+        Me apasiona el desarrollo web y crear aplicaciones eficientes 
+        y adaptativas.
+      </p>
+      <p>
+        Mi objetivo es seguir aprendiendo y aportar soluciones profesionales 
+        en el ámbito del desarrollo de software.
+      </p>
+    </div>
+  </div>
+
+  <!-- Tecnologías -->
+  <div class="row text-center mt-5">
+  <h3>Habilidades y Tecnologías</h3>
+  <div *ngFor="let s of skills" class="col-6 col-md-3 mb-3">
+    <div class="card p-3 shadow-sm h-100">
+      <p class="mb-0">{{ s }}</p>
+    </div>
+  </div>
+</div>
+
+

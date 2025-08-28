@@ -1,0 +1,20 @@
+<div class="container mt-5">
+  <h2 class="mb-4">Mis Proyectos</h2>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <!-- Aquí hacemos el bucle -->
+    <div class="col" *ngFor="let p of proyectos">
+      <div class="card h-100 shadow-sm">
+        <img [src]="p.imagen" class="card-img-top" alt="Imagen del proyecto">
+        <div class="card-body">
+          <h5 class="card-title">{{ p.titulo }}</h5>
+          <p class="card-text">{{ p.descripcion }}</p>
+          <p class="text-muted">
+            <small>Tecnologías: {{ p.tecnologias.join(', ') }}</small>
+          </p>
+          <a [href]="p.link" target="_blank" class="btn btn-primary">Ver Proyecto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
