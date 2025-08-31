@@ -2,3 +2,46 @@
   transform: scale(1.03);
   transition: 0.3s;
 }
+
+.mb-4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+p{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h5{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.izquierda { 
+  background-color: #f8d7da; 
+  float: left;
+}
+.centro { 
+  background-color: #d1ecf1;
+  margin: 0 auto;
+  display: block; 
+}
+.derecha { 
+  background-color: #d4edda; 
+  float: right;
+}

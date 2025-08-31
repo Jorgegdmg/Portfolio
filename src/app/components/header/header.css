@@ -1,0 +1,21 @@
+.header {
+  background-color: #0d1117; /* negro GitHub */
+  padding: 15px;
+  color: white;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.header a.active {
+  font-weight: bold;
+}
