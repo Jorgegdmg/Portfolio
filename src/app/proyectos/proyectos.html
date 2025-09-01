@@ -1,9 +1,9 @@
-<div class="container mt-5">
+<div class="div0">
   <h2 class="mb-4">Mis Proyectos</h2>
 
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
     <!-- Aquí hacemos el bucle -->
-    <div class="col" *ngFor="let p of proyectos; let d = div">
+    <div class="col" *ngFor="let p of proyectos; let i = index">
       <div class="card h-100 shadow-sm" [ngClass]="{'izquierda': i === 0, 'centro': i === 1, 'derecha': i === 2}">
         <img [src]="p.imagen" class="card-img-top" alt="Imagen del proyecto">
         <div class="card-body">
