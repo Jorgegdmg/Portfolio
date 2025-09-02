@@ -3,15 +3,6 @@
   transition: 0.3s;
 }
 
-.div0 {
-  background-color: black;
-  width: 100%;        /* Que ocupe todo el ancho */
-  min-height: 100vh;  /* Que ocupe toda la altura visible (viewport height) */
-  padding: 20px;      /* Opcional, espacio interno */
-  box-sizing: border-box;
-}
-
-
 .mb-4{
   display: flex;
   justify-content: center;
@@ -19,11 +10,27 @@
   margin-right: 40px;
 }
 
-.card{
+/*Contenedor padre*/
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* siempre 4 por fila */
+  gap: 50px; /* separación entre tarjetas */
+  justify-items: center; /* centra las tarjetas dentro de su celda */
+}
+
+/*Contenedores hijos*/
+.col {
+  flex: 1;
+  min-width: 250px; /* para que se adapten */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px; /* opcional, para que no sean demasiado grandes */
+  padding: 40px;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 p{
@@ -39,18 +46,4 @@ h5{
 h2{
   font-size: 40px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.izquierda { 
-  background-color: #f8d7da; 
-  float: left;
-}
-.centro { 
-  background-color: #d1ecf1;
-  margin: 0 auto;
-  display: block; 
-}
-.derecha { 
-  background-color: #d4edda; 
-  float: right;
 }
