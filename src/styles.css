@@ -1,1 +1,43 @@
+/* Fondo general tipo GitHub */
+body {
+  margin: 0;
+  background-color: #161b22; /* gris oscuro */
+  color: #e6edf3;            /* texto claro */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Header / Navbar estilo GitHub */
+header {
+  background-color: #0d1117; /* casi negro */
+  color: #e6edf3;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #30363d; /* sutil línea gris */
+}
+
+/* Navbar */
+nav {
+  background-color: #0d1117;
+  border-bottom: 1px solid #30363d;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  
+}
+
+/* Links de la navbar */
+nav a {
+  color: #c9d1d9;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.2s;
+}
+nav a:hover {
+  color: #3fb950; /* verde al pasar el ratón */
+  border-bottom: 2px solid #3fb950;
+  padding-bottom: 2px;
+}
 
