@@ -71,7 +71,23 @@ export class Proyectos {
     imagen: "img/ecoshop.png",
     link: "https://ecoshop.app",
     color: "#8BC34A"
-    }
+    },
+    {
+    titulo: "EcoShop",
+    descripcion: "E-commerce sostenible con recomendaciones basadas en IA y sistema de puntos verdes por cada compra.",
+    tecnologias: ["Next.js, TailwindCSS, Stripe API"],
+    imagen: "img/ecoshop.png",
+    link: "https://ecoshop.app",
+    color: "#8BC34A"
+    },
+    {
+    titulo: "EcoShop",
+    descripcion: "E-commerce sostenible con recomendaciones basadas en IA y sistema de puntos verdes por cada compra.",
+    tecnologias: ["Next.js, TailwindCSS, Stripe API"],
+    imagen: "img/ecoshop.png",
+    link: "https://ecoshop.app",
+    color: "#8BC34A"
+    },
   ];
   }
 
