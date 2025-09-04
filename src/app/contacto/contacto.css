@@ -1,49 +1,54 @@
-.card {
-  background-color: #0d1117;
+/* Contenedor general */
+.contact-container {
+  width: 100%;
+  min-height: 80vh;
+  background-color: #161b22; /* fondo estilo GitHub */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título */
+.contact-container h2 {
+  text-align: center;
+  color: #3fb950; /* verde GitHub */
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+/* Cada tarjeta individual */
+.contact-card {
+  background-color: #0d1117;   /* tarjeta oscura */
   border: 1px solid #30363d;
   border-radius: 8px;
-  padding: 2rem;
-  width: 400px;
-  margin: auto;
+  padding: 1.5rem 2rem;
+  margin: 1rem 0;
+  width: 350px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: transform 0.2s;
 }
 
-.card h2 {
+.contact-card:hover {
+  transform: scale(1.03);
+}
+
+/* Etiquetas */
+.contact-card strong {
+  display: block;
   color: #3fb950;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
-.card p,
-.card a {
-  color: #c9d1d9;
+/* Links */
+.contact-card a {
+  text-decoration: none;
+  color: #58a6ff;
   font-size: 1.1rem;
 }
 
-.card strong {
+.contact-card a:hover {
   color: #3fb950;
-}
-
-.card a {
-  text-decoration: none;
-  color: #58a6ff;
-}
-.card a:hover {
-  color: #3fb950;
-}
-
-/* Cambiarlo por un mail to para que cuando le de al gmail le salga para enviarme un correo*/
-.card .btn {
-  background-color: #21262d;
-  border: 1px solid #3fb950;
-  color: #3fb950;
-  margin: 0.3rem;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.card .btn:hover {
-  background-color: #3fb950;
-  color: #0d1117;
 }
