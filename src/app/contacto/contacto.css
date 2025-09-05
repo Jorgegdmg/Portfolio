@@ -1,11 +1,12 @@
 /* Contenedor general */
 .contact-container {
   width: 100%;
-  min-height: 80vh;
-  background-color: #161b22; /* fondo estilo GitHub */
+  min-height: 60vh;
+  background-color: #161b22; /* Fondo estilo GitHub */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 /* Título */
@@ -19,22 +20,23 @@
 
 /* Cada tarjeta individual */
 .contact-card {
-  background-color: #0d1117;   /* tarjeta oscura */
-  border: 1px solid #30363d;
-  border-radius: 10px;
-  padding: 1.5rem 2rem;
-  margin: 1rem 0;
-  width: 350px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-  transition: transform 0.2s;
   position: relative;
-  cursor: pointer;
+  background: #0d1117; /* mismo fondo que tu web */
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
   overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 300px;         /* ancho fijo */
+  min-height: 60px;    /* altura mínima */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;   /* centra texto y enlaces */
 }
 
 .contact-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
 }
 
 /* Etiquetas */
@@ -56,33 +58,32 @@
   color: #3fb950;
 }
 
-/* Animación */
-.contact-card::after, .contact-card::before{
-  content: '';
+/* Borde neon animado */
+.contact-card::before {
+  content: "";
   position: absolute;
-  height: calc(100% + 5px);
-  width: calc(100% + 5px);
-  background: linear-gradient(45deg, #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
-  background-size: 400%;
-  top: -2px;
-  left: -2px;
-  z-index: -1;
-  border-radius: 10px;
-  animation: animate 20s linear infinite;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px; /* grosor del borde */
+  background: linear-gradient(270deg, #ff00ff, #00ffff, #ff0000, #00ff00);
+  background-size: 600% 600%;
+  animation: borderGlow 4s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0; /* invisible al inicio */
+  transition: opacity 0.3s ease-in-out;
 }
 
-@keyframes animate{
-  0%{
-    background-position: 0 0;
-  }
-  50%{
-    background-position: 400% 0;
-  }
-  100%{
-    background-position: 0 0;
-  }
+.contact-card:hover::before {
+  opacity: 1; /* se enciende el borde solo al pasar el ratón */
 }
 
-.contact-card::after{
-  filter: blur(40px);
+@keyframes borderGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
