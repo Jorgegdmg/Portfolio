@@ -21,13 +21,16 @@
 .contact-card {
   background-color: #0d1117;   /* tarjeta oscura */
   border: 1px solid #30363d;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 1.5rem 2rem;
   margin: 1rem 0;
   width: 350px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
   transition: transform 0.2s;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .contact-card:hover {
@@ -51,4 +54,35 @@
 
 .contact-card a:hover {
   color: #3fb950;
+}
+
+/* Animación */
+.contact-card::after, .contact-card::before{
+  content: '';
+  position: absolute;
+  height: calc(100% + 5px);
+  width: calc(100% + 5px);
+  background: linear-gradient(45deg, #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  background-size: 400%;
+  top: -2px;
+  left: -2px;
+  z-index: -1;
+  border-radius: 10px;
+  animation: animate 20s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 400% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
+}
+
+.contact-card::after{
+  filter: blur(40px);
 }
