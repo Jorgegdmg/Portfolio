@@ -27,8 +27,10 @@
   margin: 15px 0;
   overflow: hidden;
   transition: transform 0.3s ease;
-  width: 300px;         /* ancho fijo */
-  min-height: 60px;    /* altura mínima */
+  width: 90%;          /* ocupa casi todo el ancho en móvil */
+  max-width: 350px;    /* nunca pasa de 350px */
+  min-height: 80px;    /* altura mínima */
+  display: flex;       
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -82,8 +84,17 @@
   opacity: 1; /* se enciende el borde solo al pasar el ratón */
 }
 
+/* Animación */
 @keyframes borderGlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* Media queries para móvil */
+@media (max-width: 500px) {
+  .contact-card {
+    min-height: 70px; /* un poco más compactas en móvil */
+    padding: 15px;
+  }
 }

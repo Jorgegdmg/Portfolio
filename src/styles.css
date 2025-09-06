@@ -25,7 +25,8 @@ nav {
   padding: 1rem;
   position: sticky;
   top: 0;
-  height: 24px;
+  height: auto; /* ajustable según el contenido */
+  flex-wrap: wrap; /* permite que baje el texto si no cabe */
 }
 
 /* Links de la navbar */
@@ -41,3 +42,22 @@ nav a:hover {
   padding-bottom: 2px;
 }
 
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;   /* enlaces en columna */
+    align-items: center;      /* centrados */
+    gap: 1rem;                /* menos separación */
+  }
+
+  nav a {
+    font-size: 1rem;          /* texto un pelín más pequeño */
+    border: none;             /* sin borde inferior por defecto */
+    padding: 0.5rem;
+  }
+
+  nav a:hover {
+    border: none;             /* quitamos el borde hover */
+    color: #3fb950;           /* dejamos solo el color */
+  }
+}
