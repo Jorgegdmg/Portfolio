@@ -45,6 +45,34 @@ h5{
 }
 
 h2{
-  font-size: 40px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: #3fb950; /* verde GitHub */
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-size: 3rem;              
+  font-weight: 700;                         
+  text-align: center;          
+  font-family: 'Poppins', sans-serif; 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 2rem 1rem;
+  }
+
+  .about-container img {
+    max-width: 180px;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-container p {
+    font-size: 1rem;
+    text-align: center; /* centrado en móvil */
+  }
+
+  .about-skills h3 {
+    font-size: 1.6rem;
+  }
 }

@@ -1,0 +1,98 @@
+/* Título */
+h2{
+  text-align: center;
+  color: #3fb950; /* verde GitHub */
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-size: 3rem;              
+  font-weight: 700;                         
+  text-align: center;          
+  font-family: 'Poppins', sans-serif; 
+}
+
+/* ====== Sección Sobre mí ====== */
+.about-container {
+  width: 100%;
+  background-color: #161b22; /* fondo oscuro tipo GitHub */
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Foto de perfil */
+.about-container img {
+  max-width: 250px;
+  border-radius: 50%;
+  border: 3px solid #3fb950; /* borde verde llamativo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(63, 185, 80, 0.6); /* brillo verde */
+}
+
+/* Texto */
+.about-container p {
+  color: #e6edf3;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  text-align: justify;
+}
+
+/* Habilidades y tecnologías */
+.about-skills h3 {
+  color: #3fb950;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 3rem 0 2rem 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-skills .card {
+  background: #0d1117;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.about-skills .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(63, 185, 80, 0.5);
+}
+
+.about-skills p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #c9d1d9;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 2rem 1rem;
+  }
+
+  .about-container img {
+    max-width: 180px;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-container p {
+    font-size: 1rem;
+    text-align: center; /* centrado en móvil */
+  }
+
+  .about-skills h3 {
+    font-size: 1.6rem;
+  }
+}

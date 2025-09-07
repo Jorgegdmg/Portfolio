@@ -24,9 +24,9 @@ nav {
   gap: 2rem;
   padding: 1rem;
   position: sticky;
-  top: 0;
-  height: auto; /* ajustable según el contenido */
-  flex-wrap: wrap; /* permite que baje el texto si no cabe */
+  top: 4px;
+  border: 10px;
+  min-height: 30px; /* Esto enseñarselo a Carl que si lo quito se baja el menu de navegacion*/
 }
 
 /* Links de la navbar */
