@@ -55,37 +55,6 @@ h2{
   text-align: justify;
 }
 
-/* Habilidades y tecnologías */
-.about-skills h3 {
-  color: #3fb950;
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 3rem 0 2rem 0;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-}
-
-.about-skills .card {
-  background: #0d1117;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-}
-
-.about-skills .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(63, 185, 80, 0.5);
-}
-
-.about-skills p {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #c9d1d9;
-  font-weight: 500;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .about-container {
