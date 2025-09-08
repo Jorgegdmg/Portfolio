@@ -3,7 +3,7 @@ body {
   margin: 0;
   background-color: #161b22; /* gris oscuro */
   color: #e6edf3;            /* texto claro */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Header / Navbar estilo GitHub */
@@ -26,7 +26,7 @@ nav {
   position: sticky;
   top: 4px;
   border: 10px;
-  min-height: 30px; /* Esto enseñarselo a Carl que si lo quito se baja el menu de navegacion*/
+  min-height: 30px; /* Si lo quito se baja el menu de navegacion*/
 }
 
 /* Links de la navbar */

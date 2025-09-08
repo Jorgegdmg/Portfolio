@@ -71,6 +71,7 @@ h2{
   transform: translateY(-5px);
 }
 
+/* Borde neon animado */
 .education-item::before {
   content: "";
   position: absolute;

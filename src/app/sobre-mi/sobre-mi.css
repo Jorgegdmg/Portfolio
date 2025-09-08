@@ -2,7 +2,7 @@
 h2{
   text-align: center;
   color: #3fb950; /* verde GitHub */
-  margin-top: 0.5rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   font-size: 2.5rem;
   font-size: 3rem;              
@@ -14,8 +14,7 @@ h2{
 /* ====== Sección Sobre mí ====== */
 .about-container {
   width: 100%;
-  background-color: #161b22; /* fondo oscuro tipo GitHub */
-  padding: 4rem 2rem;
+  background-color: #161b22; /* fondo oscuro tipo GitHub */  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,11 +22,22 @@ h2{
 }
 
 /* Foto de perfil */
+.about-container .profile-pic {
+  width: 300px;
+  height: 350px;
+  border-radius: 50%;
+  background-image: url("../../assets/img/foto-perfil.jpg");
+  background-size: cover;     /* que cubra toda la caja */
+  background-position: center; /* centrada */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  margin: 0 auto; /* centrado horizontal */
+}
+
 .about-container img {
-  max-width: 250px;
   border-radius: 50%;
   border: 3px solid #3fb950; /* borde verde llamativo */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: none;
 }
 
 .about-container img:hover {

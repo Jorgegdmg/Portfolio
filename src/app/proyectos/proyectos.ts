@@ -22,7 +22,6 @@ export class Proyectos {
       imagen: 'assets/proyecto1.jpg',
       tecnologias: ['Angular', 'Bootstrap', 'TypeScript'],
       link: 'https://miportfolio.com',
-      color: '#f8d7da'
     },
     {
       titulo: 'E-commerce Demo',
@@ -30,7 +29,6 @@ export class Proyectos {
       imagen: 'assets/proyecto2.jpg',
       tecnologias: ['Angular', 'Node.js', 'MongoDB'],
       link: 'https://midemo.com',
-      color: '#d1ecf1'
     },
     {
       titulo: 'Gestor de Tareas',
@@ -38,7 +36,6 @@ export class Proyectos {
       imagen: 'assets/proyecto3.jpg',
       tecnologias: ['React', 'Firebase'],
       link: 'https://gestortareas.com',
-      color: '#d4edda'
     },
     {
     titulo: "TaskFlow",
@@ -46,7 +43,6 @@ export class Proyectos {
     tecnologias: ['React', 'Node.js', 'MongoDB'],
     imagen: "img/taskflow.png",
     link: "https://taskflow.app/demo",
-    color: "#4CAF50"
     },
     {
     titulo: "PixelRaiders",
@@ -54,7 +50,6 @@ export class Proyectos {
     tecnologias: ["HTML5 Canvas, JavaScript, Firebase"],
     imagen: "img/pixelraiders.png",
     link: "https://pixelraiders.io",
-    color: "#FF5722"
     },
     {
     titulo: "DataVizX",
@@ -62,7 +57,6 @@ export class Proyectos {
     tecnologias: ["Vue.js, D3.js, PostgreSQL"],
     imagen: "img/datavizx.png",
     link: "https://datavizx.app",
-    color: "#2196F3"
     },
     {
     titulo: "EcoShop",
@@ -70,7 +64,6 @@ export class Proyectos {
     tecnologias: ["Next.js, TailwindCSS, Stripe API"],
     imagen: "img/ecoshop.png",
     link: "https://ecoshop.app",
-    color: "#8BC34A"
     },
     {
     titulo: "EcoShop",
@@ -78,7 +71,6 @@ export class Proyectos {
     tecnologias: ["Next.js, TailwindCSS, Stripe API"],
     imagen: "img/ecoshop.png",
     link: "https://ecoshop.app",
-    color: "#8BC34A"
     },
     {
     titulo: "EcoShop",
@@ -86,7 +78,6 @@ export class Proyectos {
     tecnologias: ["Next.js, TailwindCSS, Stripe API"],
     imagen: "img/ecoshop.png",
     link: "https://ecoshop.app",
-    color: "#8BC34A"
     },
   ];
   }
