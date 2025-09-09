@@ -2,8 +2,7 @@
 h2{
   text-align: center;
   color: #3fb950; /* verde GitHub */
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 0rem;
   font-size: 2.5rem;
   font-size: 3rem;              
   font-weight: 700;                         
@@ -26,16 +25,6 @@ h2{
   font-size: 2.5rem;
   margin-bottom: 2rem;
   font-family: 'Poppins', sans-serif;
-}
-
-.education-item {
-  background: #0d1117;
-  border: 1px solid #30363d;
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin: 1rem auto;
-  max-width: 600px;
-  text-align: left;
 }
 
 .education-item h3 {
@@ -92,6 +81,154 @@ h2{
 }
 
 .education-item:hover::before {
+  opacity: 1; /* se enciende el borde solo al pasar el ratón */
+}
+
+.tecnologias-container {
+  width: 100%;
+  min-height: 60vh;
+  background-color: #161b22; /* Fondo estilo GitHub */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tecnologias-container h2 {
+  color: #3fb950;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tecnologias-item {
+  position: relative;
+  background: #0d1117; /* mismo fondo que la web */
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 90%;          /* ocupa casi todo el ancho en móvil */
+  max-width: 350px;    
+  min-height: 80px;    /* altura mínima */
+  display: flex;       
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;   /* centra texto y enlaces */
+}
+
+.tecnologias-item h3 {
+  margin: 0;
+  color: #58a6ff;
+  font-size: 1.2rem;
+}
+
+.tecnologias-item p {
+  margin: 0.5rem 0 0;
+  color: #c9d1d9;
+}
+
+.tecnologias-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Borde neon animado */
+.tecnologias-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px; /* grosor del borde */
+  background: linear-gradient(270deg, #ff00ff, #00ffff, #ff0000, #00ff00);
+  background-size: 600% 600%;
+  animation: borderGlow 4s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0; /* invisible al inicio */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tecnologias-item:hover::before {
+  opacity: 1; /* se enciende el borde solo al pasar el ratón */
+}
+
+.softskills-container {
+  width: 100%;
+  min-height: 60vh;
+  background-color: #161b22; /* Fondo estilo GitHub */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.softskills-container h2 {
+  color: #3fb950;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.softskills-item {
+  position: relative;
+  background: #0d1117; /* mismo fondo que la web */
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 90%;          /* ocupa casi todo el ancho en móvil */
+  max-width: 350px;    
+  min-height: 80px;    /* altura mínima */
+  display: flex;       
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;   /* centra texto y enlaces */
+}
+
+.softskills-item h3 {
+  margin: 0;
+  color: #58a6ff;
+  font-size: 1.2rem;
+}
+
+.softskills-item p {
+  margin: 0.5rem 0 0;
+  color: #c9d1d9;
+}
+
+.softskills-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Borde neon animado */
+.softskills-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px; /* grosor del borde */
+  background: linear-gradient(270deg, #ff00ff, #00ffff, #ff0000, #00ff00);
+  background-size: 600% 600%;
+  animation: borderGlow 4s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0; /* invisible al inicio */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.softskills-item:hover::before {
   opacity: 1; /* se enciende el borde solo al pasar el ratón */
 }
 

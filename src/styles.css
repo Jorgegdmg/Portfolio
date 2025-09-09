@@ -17,6 +17,7 @@ header {
 
 /* Navbar */
 nav {
+  z-index: 99;
   background-color: #0d1117;
   border-bottom: 1px solid #30363d;
   display: flex;
@@ -24,7 +25,7 @@ nav {
   gap: 2rem;
   padding: 1rem;
   position: sticky;
-  top: 4px;
+  top: 0px;
   border: 10px;
   min-height: 30px; /* Si lo quito se baja el menu de navegacion*/
 }
