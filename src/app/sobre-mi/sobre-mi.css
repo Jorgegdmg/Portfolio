@@ -75,3 +75,16 @@ h2{
     font-size: 1.6rem;
   }
 }
+
+.saludo {
+  font-size: 2.8rem;              /* Grande */
+  font-weight: bold;              /* Negrita */
+  color: #3fb950;                 /* Verde GitHub */
+  font-family: 'Pacifico', cursive; /* Fuente más especial */
+  margin-bottom: 1rem;
+  text-align: left;               /* alineado con el texto */
+}
+
+/* Fuente importada de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+

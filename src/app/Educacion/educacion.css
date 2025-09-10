@@ -1,72 +1,63 @@
-/* Titulo */
-h2{
+/* Contenedor general para 5 columnas */
+.info-sections {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #161b22;
+  flex-wrap: wrap; /* permite que salte a otra línea si no cabe */
+}
+
+/* Cada sección ocupa el mismo espacio */
+.info-sections > section {
+  flex: 1;
+  max-width: 350px;
+  min-width: 250px;
+}
+
+/* Estilos compartidos para todas las secciones */
+.info-sections section h2 {
+  color: #3fb950;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
-  color: #3fb950; /* verde GitHub */
-  margin-top: 0rem;
-  font-size: 2.5rem;
-  font-size: 3rem;              
-  font-weight: 700;                         
-  text-align: center;          
-  font-family: 'Poppins', sans-serif; 
 }
 
-.education-container {
-  width: 100%;
-  min-height: 60vh;
-  background-color: #161b22; /* Fondo estilo GitHub */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.education-container h2 {
-  color: #3fb950;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-.education-item h3 {
-  margin: 0;
-  color: #58a6ff;
-  font-size: 1.2rem;
-}
-
-.education-item p {
-  margin: 0.5rem 0 0;
-  color: #c9d1d9;
-}
-
-.education-item {
+.info-sections section div {
   position: relative;
-  background: #0d1117; /* mismo fondo que la web */
+  background: #0d1117;
   border-radius: 12px;
   padding: 20px;
   margin: 15px 0;
   overflow: hidden;
   transition: transform 0.3s ease;
-  width: 90%;          /* ocupa casi todo el ancho en móvil */
-  max-width: 350px;    
-  min-height: 80px;    /* altura mínima */
-  display: flex;       
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;   /* centra texto y enlaces */
+  text-align: center;
+  color: #c9d1d9;
 }
 
-.education-item:hover {
+.info-sections section div:hover {
   transform: translateY(-5px);
 }
 
-/* Borde neon animado */
-.education-item::before {
+.info-sections section div h3 {
+  margin: 0;
+  color: #58a6ff;
+  font-size: 1.2rem;
+}
+
+.info-sections section div p {
+  margin: 0.5rem 0 0;
+}
+
+/* Borde neón animado */
+.info-sections section div::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 12px;
-  padding: 2px; /* grosor del borde */
+  padding: 2px;
   background: linear-gradient(270deg, #ff00ff, #00ffff, #ff0000, #00ff00);
   background-size: 600% 600%;
   animation: borderGlow 4s linear infinite;
@@ -76,163 +67,15 @@ h2{
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
-  opacity: 0; /* invisible al inicio */
+  opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
-.education-item:hover::before {
-  opacity: 1; /* se enciende el borde solo al pasar el ratón */
+.info-sections section div:hover::before {
+  opacity: 1;
 }
 
-.tecnologias-container {
-  width: 100%;
-  min-height: 60vh;
-  background-color: #161b22; /* Fondo estilo GitHub */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.tecnologias-container h2 {
-  color: #3fb950;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-.tecnologias-item {
-  position: relative;
-  background: #0d1117; /* mismo fondo que la web */
-  border-radius: 12px;
-  padding: 20px;
-  margin: 15px 0;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  width: 90%;          /* ocupa casi todo el ancho en móvil */
-  max-width: 350px;    
-  min-height: 80px;    /* altura mínima */
-  display: flex;       
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;   /* centra texto y enlaces */
-}
-
-.tecnologias-item h3 {
-  margin: 0;
-  color: #58a6ff;
-  font-size: 1.2rem;
-}
-
-.tecnologias-item p {
-  margin: 0.5rem 0 0;
-  color: #c9d1d9;
-}
-
-.tecnologias-item:hover {
-  transform: translateY(-5px);
-}
-
-/* Borde neon animado */
-.tecnologias-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  padding: 2px; /* grosor del borde */
-  background: linear-gradient(270deg, #ff00ff, #00ffff, #ff0000, #00ff00);
-  background-size: 600% 600%;
-  animation: borderGlow 4s linear infinite;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  opacity: 0; /* invisible al inicio */
-  transition: opacity 0.3s ease-in-out;
-}
-
-.tecnologias-item:hover::before {
-  opacity: 1; /* se enciende el borde solo al pasar el ratón */
-}
-
-.softskills-container {
-  width: 100%;
-  min-height: 60vh;
-  background-color: #161b22; /* Fondo estilo GitHub */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.softskills-container h2 {
-  color: #3fb950;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-.softskills-item {
-  position: relative;
-  background: #0d1117; /* mismo fondo que la web */
-  border-radius: 12px;
-  padding: 20px;
-  margin: 15px 0;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  width: 90%;          /* ocupa casi todo el ancho en móvil */
-  max-width: 350px;    
-  min-height: 80px;    /* altura mínima */
-  display: flex;       
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;   /* centra texto y enlaces */
-}
-
-.softskills-item h3 {
-  margin: 0;
-  color: #58a6ff;
-  font-size: 1.2rem;
-}
-
-.softskills-item p {
-  margin: 0.5rem 0 0;
-  color: #c9d1d9;
-}
-
-.softskills-item:hover {
-  transform: translateY(-5px);
-}
-
-/* Borde neon animado */
-.softskills-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  padding: 2px; /* grosor del borde */
-  background: linear-gradient(270deg, #ff00ff, #00ffff, #ff0000, #00ff00);
-  background-size: 600% 600%;
-  animation: borderGlow 4s linear infinite;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  opacity: 0; /* invisible al inicio */
-  transition: opacity 0.3s ease-in-out;
-}
-
-.softskills-item:hover::before {
-  opacity: 1; /* se enciende el borde solo al pasar el ratón */
-}
-
-/* Animación */
+/* Animación del borde */
 @keyframes borderGlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -240,22 +83,9 @@ h2{
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .about-container {
-    padding: 2rem 1rem;
-  }
-
-  .about-container img {
-    max-width: 180px;
-    margin-bottom: 1.5rem;
-  }
-
-  .about-container p {
-    font-size: 1rem;
-    text-align: center; /* centrado en móvil */
-  }
-
-  .about-skills h3 {
-    font-size: 1.6rem;
+@media (max-width: 1200px) {
+  .info-sections {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
