@@ -8,16 +8,16 @@
 .row {
   padding: 15px;
   display: grid;/* Aqui iba el display grid */
-  grid-template-columns: repeat(4,1fr); /* repite 4 por fila ocupando 1fr*/
+  grid-template-columns: repeat(3,1fr); /* repite 4 por fila ocupando 1fr*/
   justify-items: center; /* centra las tarjetas dentro de su celda */
 }
 
 /*Contenedores hijos*/
 .col {
   flex: 1;
-  min-width: 250px; /* para que se adapten */
+  min-width: 450px; /* para que se adapten */
   display: inline-block;
-  margin: 30px;
+  margin: 20px;
 }
 
 .card {
@@ -29,8 +29,8 @@
   overflow: hidden;
   transition: transform 0.3s ease;
   width: 90%;          /* ocupa casi todo el ancho en móvil */
-  max-width: 350px;    
-  min-height: 80px;    /* altura mínima */
+  max-width: 400px;    
+  min-height: 100px;    /* altura mínima */
   display: flex;       
   flex-direction: column;
   justify-content: center;
@@ -58,7 +58,7 @@ h5{
 h2{
   text-align: center;
   color: #3fb950; /* verde GitHub */
-  margin-top: 5rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
   font-size: 2.5rem;
   font-size: 3rem;              

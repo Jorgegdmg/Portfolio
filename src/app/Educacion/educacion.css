@@ -1,91 +1,146 @@
-/* Contenedor general para 5 columnas */
+/* Contenedor general en grid */
 .info-sections {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas en la primera fila */
   gap: 20px;
-  padding: 40px 20px;
-  background-color: #161b22;
-  flex-wrap: wrap; /* permite que salte a otra línea si no cabe */
+  margin-top: 120px;
 }
 
-/* Cada sección ocupa el mismo espacio */
-.info-sections > section {
-  flex: 1;
-  max-width: 350px;
-  min-width: 250px;
-}
-
-/* Estilos compartidos para todas las secciones */
-.info-sections section h2 {
-  color: #3fb950;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-}
-
-.info-sections section div {
-  position: relative;
+/* Cada caja */
+.info-box {
   background: #0d1117;
   border-radius: 12px;
   padding: 20px;
-  margin: 15px 0;
-  overflow: hidden;
   transition: transform 0.3s ease;
-  text-align: center;
-  color: #c9d1d9;
 }
 
-.info-sections section div:hover {
+.info-box:hover {
   transform: translateY(-5px);
 }
 
-.info-sections section div h3 {
-  margin: 0;
+/* Contenedor que limita el ancho y centra todo */
+.info-wrapper {
+  max-width: 1600px;   
+  margin: 0 auto;      /* centra horizontalmente */
+  padding: 40px;       
+}
+
+/* Títulos */
+.info-box h2 {
+  text-align: center;
+  color: #3fb950;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Subtítulos */
+.info-box h3 {
+  margin: 1rem;
   color: #58a6ff;
   font-size: 1.2rem;
 }
 
-.info-sections section div p {
+/* Texto */
+.info-box p {
   margin: 0.5rem 0 0;
+  color: #c9d1d9;
+  text-align: center;
 }
 
-/* Borde neón animado */
-.info-sections section div::before {
+/* Responsive: en pantallas medianas -> 2 columnas */
+@media (max-width: 1000px) {
+  .info-sections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: en móvil -> 1 columna */
+@media (max-width: 600px) {
+  .info-sections {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Forzar que el contenido de cada "item" esté en columna y centrado */
+.info-box .education-item,
+.info-box .tecnologias-item,
+.info-box .softskills-item,
+.info-box .idiomas-item,
+.info-box .experiencia-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centra horizontalmente hijos (h3, p, ...) */
+  text-align: center;    /* centra texto (por si hay elementos inline) */
+}
+
+/* Asegurar que los subtítulos queden centrados */
+.info-box h3 {
+  text-align: center;
+  color: #58a6ff; 
+  margin: 0 0 8px 0;
+}
+
+/* Centrar los párrafos */
+.info-box p {
+  text-align: center;
+  color: #c9d1d9;
+}
+
+/* Caja base */
+.info-box {
+  position: relative;
+  border-radius: 12px;
+  background: #0d1117; /* fondo oscuro */
+  border: 2px solid #222; /* borde inicial discreto */
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+  z-index: 0;
+}
+
+/* Animación al pasar el ratón */
+.info-box:hover::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
   border-radius: 12px;
-  padding: 2px;
-  background: linear-gradient(270deg, #ff00ff, #00ffff, #ff0000, #00ff00);
+  background: linear-gradient(
+    270deg,
+    #58a6ff,
+    #00ffea,
+    #ff00ff,
+    #58a6ff
+  );
   background-size: 600% 600%;
-  animation: borderGlow 4s linear infinite;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  animation: neonBorder 6s linear infinite;
+  z-index: -1;
 }
 
-.info-sections section div:hover::before {
-  opacity: 1;
+/* Fondo oscuro dentro de la tarjeta (para que el degradado no tape el contenido) */
+.info-box:hover::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border-radius: 10px;
+  background: #0d1117;
+  z-index: -1;
 }
 
-/* Animación del borde */
-@keyframes borderGlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Responsive */
-@media (max-width: 1200px) {
-  .info-sections {
-    flex-wrap: wrap;
-    justify-content: center;
+/* Animación del borde neón */
+@keyframes neonBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
